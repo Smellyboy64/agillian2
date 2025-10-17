@@ -1,0 +1,220 @@
+/* this is a comment */
+
+/* General styling */
+* {
+  box-shadow: 5px 5px 10px black;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #111111; /* darker text for better contrast */
+}
+
+/* Header */
+header {
+  padding: 60px;
+  text-align: center;
+  background: #00796b; /* darker teal for contrast */
+  color: #ffffff; /* keep white for strong contrast */
+}
+
+h1 {
+  color: #003366; /* dark blue for readability */
+  font-size: 36px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  color: #111111; /* darker text */
+}
+
+/* Top navigation bar */
+nav {
+  display: flex;
+  background-color: #222222; /* darker nav background */
+}
+
+nav a {
+  color: #ffffff; /* bright links on dark background */
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #555555; /* higher contrast hover */
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Navigation link states */
+nav a:link {
+  color: #ffffff;
+}
+
+nav a:visited {
+  color: #cccccc;
+}
+
+nav a:hover {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+nav a:active {
+  color: #ffcc00; /* bright yellow for active */
+}
+
+/* Column container */
+main {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Main column */
+section {
+  flex: 70%;
+  background-color: #f8f8f8; /* slightly gray background for contrast */
+  padding: 20px;
+  margin: 20px;
+  color: #111111;
+}
+
+article {
+  padding: 15px;
+  color: #111111;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #004d40; /* dark green footer */
+  color: #ffffff; /* white text for high contrast */
+}
+
+/* ID selector example */
+#site-footer {
+  background: #004d40;
+  color: #ffffff;
+}
+
+/* IMAGE STYLING */
+.img-border {
+  border: 5px solid #000000;
+  width: 300px;
+}
+
+.img-radius {
+  border-radius: 50%;
+  width: 300px;
+}
+
+.img-opacity {
+  opacity: 0.5;
+  width: 300px;
+}
+
+.fakeimg:hover {
+  background-color: #d34f4f;
+  width: 300px;
+  padding: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000000;
+  outline-style: dashed;
+  outline-width: 3px;
+  outline-color: #ff0000;
+}
+
+/* LIST STYLING */
+.decimal-list {
+  list-style-type: decimal;
+}
+
+.circle-list {
+  list-style-type: circle;
+}
+
+.image-list {
+  list-style-position: inside; 
+  padding-left: 0;
+}
+
+.image-list li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.image-list li::marker {
+  content: url('anotherduck.jpg'); 
+  width: 20px;
+  height: 20px;
+}
+
+/* TABLE STYLING */
+.duck-table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #111111;
+}
+
+.duck-table th, .duck-table td {
+  border: 2px solid #333;
+  padding: 8px;
+  text-align: left;
+}
+
+.duck-table th {
+  background-color: #00796b; /* darker teal header */
+  color: #ffffff;
+}
+
+.duck-table tr:nth-child(even) {
+  background-color: #e0f2f1; /* light contrasting row color */
+}
+
+/* LINKS STYLING */
+a {
+  color: #0000cc; /* darker blue links */
+}
+
+section a {
+  color: #003366; /* darker green/blue links for contrast */
+}
+
+/* RESPONSIVE TABLE */
+@media screen and (max-width: 700px) {
+  main, nav {
+    flex-direction: column;
+  }
+
+  .duck-table, .duck-table thead, .duck-table tbody, .duck-table th, .duck-table td, .duck-table tr {
+    display: block;
+  }
+
+  .duck-table tr {
+    margin-bottom: 15px;
+  }
+
+  .duck-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .duck-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
